@@ -1,0 +1,181 @@
+% pdf language=fr interface=en
+
+\setupfontsynonym[cmr10][handling=pure]
+%\setupfontsynonym[serif,sans,mono][handling=pure]
+\setupfonthandling[normal][left=1,right=1]
+\usetypescript[cmr] 
+\usetypescript[serif,sans,mono][hanging][thanh]
+\setupalign[hanging]
+\setupcombinedlist[content][list={section}]
+
+%\startmode[asintended] \setupbodyfont[lbr] \stopmode
+\setupbodyfont[11pt]
+%\setuppapersize[S6][A4,landscape]
+\setuppapersize[B5][A4]
+\setuplayout
+   [rightmargin=10mm,
+    rightmargindistance=2mm,
+    leftmargin=5mm,
+    leftmargindistance=2mm,
+  %%  leftedge =0.05\paperwidth,
+  %%  leftedgedistance=0.5\paperwidth,
+    header=1.8cm,
+    footer=0.8cm,
+    topspace=0cm,
+    backspace=0.05\paperwidth,
+    width=.9\paperwidth,
+    height=fit,
+    location=middle,
+    marking=on]
+
+\newdimen\headwidth
+\headwidth=\textwidth
+\advance\headwidth+22pt
+\advance\headwidth-4pt
+
+\newdimen\titlewidth
+\titlewidth=\textwidth
+
+\def\citet#1
+{
+  \cite[authoryear][#1]  
+}
+
+\def\TitlePage{
+
+  \setuppagenumber[state=stop]
+
+  \framed
+  [frame=off,offset=overlay,width=fit,height=.2\textheight,option=empty]
+  {}
+
+  \framed
+  [frame=off,width=\titlewidth,height=broad,align=middle]
+  {\switchtobodyfont[20pt,sans]
+    \bf \DocumentType }
+
+  \blank[big]
+
+  \framed
+  [frame=off,width=\titlewidth,height=broad,align=middle]
+  {\switchtobodyfont[18pt]
+   \it \Title}
+
+  \blank[2*big]
+
+  \framed
+  [frame=off,width=\titlewidth,height=broad,align=middle]
+  {\hl[8]}
+
+  \blank[2*big]
+
+  \framed
+  [frame=off,width=\titlewidth,height=broad,align=middle]
+  {\ss\bfb\SubTitle}
+
+  \framed
+  [frame=off,width=\titlewidth,height=broad,align=middle]
+  {\ss\bfb\DocumentDate}
+
+  \page[yes,reset]
+
+}
+
+\def\TableOfContent#1%
+    {\page[yes]
+     {\ss\bf #1}
+     \blank[2*big]
+     \placecontent}
+
+\def\NextPage%
+   {\page[yes,reset]}
+
+\def\BeforeNextSubject#1%
+   {\page[yes,disable]
+    #1
+    \blank[big]}
+
+\setuphead
+   [section]
+   [%alternative=margin,
+    style=\ss\bf,
+    appendixlabel=annexe]
+
+\setuphead
+   [subsection]
+   [%alternative=margin,
+    style=\ss\bf]
+
+\setuphead
+   [subsubsection]
+   [style=\ss\bf]
+
+% \definehead[annexe][section]
+
+% \setuphead
+%    [annexe]
+%    [style=\ss\bf,
+%     bodypartlabel=annexe]
+
+\setuplist[section][left=Annexe~,label=annexe, interaction=all, prefix=yes]
+
+\setuppagenumbering
+   [location=inright,
+    conversion=numbers,
+    % left=$\bullet$\,,
+    state=start]
+
+\setupheader
+   [margin]
+   [style=\small]
+
+%% Other colors defined in figures.tex
+\definecolor[OverlayColor][s=0.6]
+\definecolor[ThemeColor][r=.625]
+\definecolor[TextColor][black]
+
+\setupfloats
+    [width=broad,offset=none]
+
+\setupcaptions
+    [location=margin]
+
+\setupwhitespace[medium]
+
+\defineparagraphs
+    [summary]
+    [n=1]
+
+\setupparagraphs
+    [summary]
+    [1]
+    [style={\ss\bf},
+     width=0.8\textwidth,
+     distance=0.05\textwidth]
+
+\defineparagraphs
+    [introduction]
+    [n=1]
+
+\setupparagraphs
+    [introduction]
+    [1]
+    [before={\blank[5*big]},
+     after={\blank[2*big]},
+     width=0.93\textwidth,
+     distance=0.05\textwidth]
+
+\defineparagraphs
+    [conclusion]
+    [n=1]
+
+\setupparagraphs
+    [conclusion]
+    [1]
+    [before={\blank[5*big]},
+     after={\blank[2*big]},
+     width=0.93\textwidth,
+     distance=0.05\textwidth]
+
+\setupitemize[symbol=dash]
+\setuplabeltext[annexe=Annexe~]

@@ -1,0 +1,88 @@
+% pdf language=fr interface=en
+
+\input layout
+
+\usemodule[bib]
+
+\setupurl[style=,urlspace=yes]
+\setupinteraction[state=start]
+\setupbibtex[database=cited,sort=author]
+\setuppublications[alternative=apa-fr]
+\setuppublications[criterium=text, sorttype=bbl, numbering=no, autohang=yes, interaction=start]
+\setuppublicationlist[pagenumber=yes, interaction=start]
+
+%\unprotect
+% \setuppublicationlayout[article]{%
+%    \insertartauthors{}{ }{\insertthekey{}{ }{}}%
+%    \insertarttitle
+%         {\unskip, \bgroup\it }%
+%         {\/\egroup }{}%
+%    \insertjournal{\unskip, \bgroup }{\egroup}
+%     {}% \insertcrossref{In }{}{}}%
+%    \insertvolume
+%     { \bf }
+%     %{\egroup %\insertissue{(}{)}{}%
+%      %\insertfirstpage{, }{}{}}
+%     %{\insertfirstpage{ }{}{}}%
+%    \insertpubyear{ (}{). }{\unskip.}%
+%    \insertdoi{ DOI: }{.}{}%
+%    \insertbiburl{ }{.}{}%
+%    %\insertNote{ }{.}{}%
+%    \insertcomment{}{.}{}%
+% }
+% \protect
+
+\enableregime[utf]
+
+\starttext
+
+
+
+\def\DocumentType{
+	Dossier de candidature
+	à une formation complémentaire par la recherche
+}
+
+\def\Title{
+	Modéliser les processus territoriaux résultant des interactions ville-agriculture
+	pour accompagner le débat sur la consommation d’espaces agricoles et naturels
+}
+
+\def\SubTitle{
+	Dossier présenté par Christophe Rousson
+}
+
+\def\DocumentDate{
+	Janvier 2016
+}
+
+\TitlePage
+
+
+\TableOfContent{Sommaire}
+
+\section{Titre 1}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat \cite{poulot_agriculture_2010}. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\subsection{Titre 2}
+
+Lorem ipsum dolor sit amet \cite[interaction=start][devillers_thirty_2010], consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Bibliographie}
+
+% \blank[5*big]
+
+\placepublications
+
+\stoptext
