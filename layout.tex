@@ -1,12 +1,21 @@
 % pdf language=fr interface=en
 
-\setupfontsynonym[cmr10][handling=pure]
-%\setupfontsynonym[serif,sans,mono][handling=pure]
-\setupfonthandling[normal][left=1,right=1]
-\usetypescript[cmr] 
-\usetypescript[serif,sans,mono][hanging][thanh]
+% MkII font settings
+% \setupfontsynonym[cmr10][handling=pure]
+% \setupfontsynonym[serif,sans,mono][handling=pure]
+% \setupfonthandling[normal][left=1,right=1]
+% \usetypescript[cmr] 
+% \usetypescript[serif,sans,mono][hanging][thanh]
+
+% MkIV font settings
+\usemodule[simplefonts]
+%\setmainfont[TeX Gyre Schola]
+%\setmainfont[GFS Didot]
+\setmainfont[Latin Modern Roman]
+% \setmainfont[Times New Roman]
+
 \setupalign[hanging]
-\setupcombinedlist[content][list={section}]
+\setupcombinedlist[content][list={section},interaction=all]
 
 %\startmode[asintended] \setupbodyfont[lbr] \stopmode
 \setupbodyfont[11pt]
@@ -26,7 +35,7 @@
     width=.9\paperwidth,
     height=fit,
     location=middle,
-    marking=on]
+    marking=off]
 
 \newdimen\headwidth
 \headwidth=\textwidth
@@ -78,6 +87,7 @@
   {\ss\bfb\DocumentDate}
 
   \page[yes,reset]
+  \setuppagenumber[state=start]
 
 }
 
@@ -85,7 +95,7 @@
     {\page[yes]
      {\ss\bf #1}
      \blank[2*big]
-     \placecontent}
+     \placecontent[alternative=c]}
 
 \def\NextPage%
    {\page[yes,reset]}
@@ -99,7 +109,8 @@
    [section]
    [%alternative=margin,
     style=\ss\bf,
-    appendixlabel=annexe]
+    appendixlabel=annexe,
+    sectionconversionset=sectioncounter]
 
 \setuphead
    [subsection]
@@ -117,13 +128,26 @@
 %    [style=\ss\bf,
 %     bodypartlabel=annexe]
 
-\setuplist[section][left=Annexe~,label=annexe, interaction=all, prefix=yes]
+%\setuplist[section][left=Annexe~,label=annexe, interaction=all, prefix=yes]
 
-\setuppagenumbering
-   [location=inright,
-    conversion=numbers,
-    % left=$\bullet$\,,
-    state=start]
+% \setuppagenumbering
+%    [location=inright,
+%     conversion=numbers,
+%     % left=$\bullet$\,,
+%     state=start]
+
+\setuppagenumbering[state=start,location={footer,right}]
+
+\defineconversionset[appendix:floatconversionset] [] [A]
+\defineconversionset[appendix:pagenumber] [][romannumerals]
+\defineconversionset[bodypart:sectioncounter] [][numerals]
+\defineconversionset[appendix:sectioncounter] [A,A,A,n][Characters]
+
+% \definestructureconversionset
+%   [structure]
+%   %% part,  chapter,    section,       subsection, subsubsection
+%   [characters, characters, Characters, numbers, characters]
+%   [characters]
 
 \setupheader
    [margin]
@@ -133,6 +157,7 @@
 \definecolor[OverlayColor][s=0.6]
 \definecolor[ThemeColor][r=.625]
 \definecolor[TextColor][black]
+\definecolor[LinkColor][r=0.199,g=0.477,b=0.715]
 
 \setupfloats
     [width=broad,offset=none]

@@ -3,13 +3,13 @@ BIBLIOGRAPHY = cited.bib
 SOURCES = summary.tex introduction.tex origin.tex context.tex perspectives.tex conclusion.tex constats.tex contacts.tex advancing-lcm.tex
 TEMPLATES = layout.tex
 
-OPEN_COMMAND = open
+OPEN_COMMAND = evince
 REMOVE_COMMAND = rm -f
 
 default: $(DOCUMENT)
 
 %.pdf: %.tex $(TEMPLATES) $(SOURCES) $(BIBLIOGRAPHY)
-	texexec --pdf --color $<
+	context --pdf --color $<
 	[ -f $@ ] && $(OPEN_COMMAND) $@
 
 clean:
@@ -22,3 +22,8 @@ clean:
 	@$(REMOVE_COMMAND) *.tmp
 	@$(REMOVE_COMMAND) *.tuo
 	@$(REMOVE_COMMAND) *.tui
+	@$(REMOVE_COMMAND) *.tuc
+
+clean-all: clean
+	@echo Cleaning output files
+	@$(REMOVE_COMMAND) *.pdf

@@ -3,11 +3,10 @@
 \input layout
 
 \setupurl[style=,urlspace=yes]
-\setupinteraction[state=start]
+\setupinteraction[state=start,color=LinkColor]
 \setupbibtex[database=cited,sort=author]
 \setuppublications[alternative=apa-fr]
-\setuppublications[criterium=text, sorttype=bbl, numbering=no, autohang=yes, interaction=start]
-\setuppublicationlist[pagenumber=yes, interaction=start]
+\setuppublications[criterium=text, sorttype=bbl, numbering=no, autohang=yes]
 
 \enableregime[utf]
 
@@ -33,6 +32,7 @@
 	Janvier 2016
 }
 
+\startfrontmatter
 \TitlePage
 
 {\ss\bfb\Title}
@@ -43,6 +43,7 @@
 
 \TableOfContent{Sommaire}
 \page[yes]
+\stopfrontmatter
 
 %%%
 %%%  Content
@@ -66,7 +67,11 @@
 %%%
 
 \startappendices
-\writetolist[section]{}{Annexes}
+\setcounter[userpage][1]
+% \writetolist[section]{}{Annexes}
+\writebetweenlist[section]{
+	\blank[big]
+}
 
 \input constats
 \page[yes]
