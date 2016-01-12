@@ -1,0 +1,10 @@
+*-mpgraph.*
+*.aux
+*.log
+*.bbl
+*.blg
+*.tmp
+*.tuo
+*.tui
+*.tuc
+*.pdf
