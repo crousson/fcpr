@@ -8,17 +8,23 @@
 % \usetypescript[serif,sans,mono][hanging][thanh]
 
 % MkIV font settings
-\usemodule[simplefonts]
+%\usemodule[simplefonts]
 %\setmainfont[TeX Gyre Schola]
 %\setmainfont[GFS Didot]
-\setmainfont[Latin Modern Roman]
-% \setmainfont[Times New Roman]
+%\setmainfont[Latin Modern Roman]
+%\setmainfont[TimesNewRoman]
+
+%\pdfmapline{+ec-lmr10 LMRoman10-Regular "enclmec ReEncodeFont" <lm-ec.enc <<lmroman10-regular.pfb}
+\usetypescript[modern-designsize]
+\setupbodyfont[modern-designsize,11pt]
+%\font\rm=ec-lmr10
+%\rm
 
 \setupalign[hanging]
 \setupcombinedlist[content][list={section},interaction=all]
 
-%\startmode[asintended] \setupbodyfont[lbr] \stopmode
-\setupbodyfont[11pt]
+% \startmode[asintended] \setupbodyfont[lbr] \stopmode
+% \setupbodyfont[10pt]
 %\setuppapersize[S6][A4,landscape]
 \setuppapersize[B5][A4]
 \setuplayout

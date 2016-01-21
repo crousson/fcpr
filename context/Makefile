@@ -10,7 +10,9 @@ default: $(DOCUMENT)
 
 %.pdf: %.tex $(TEMPLATES) $(SOURCES) $(BIBLIOGRAPHY)
 	context --pdf --color $<
-	[ -f $@ ] && $(OPEN_COMMAND) $@
+
+view: $(DOCUMENT)
+	$(OPEN_COMMAND) $(DOCUMENT) &
 
 clean:
 	@echo Cleaning temporary files
