@@ -1,18 +1,20 @@
-DOCUMENT = dossier.pdf
+DOCUMENTS = dossier.pdf projet.pdf
 BIBLIOGRAPHY = cited.bib
-SOURCES = summary.tex introduction.tex origin.tex context.tex perspectives.tex conclusion.tex constats.tex contacts.tex advancing-lcm.tex
+SOURCES = metadata.tex summary.tex introduction.tex origin.tex context.tex \
+          sujet.tex research-context.tex \
+          perspectives.tex conclusion.tex constats.tex contacts.tex advancing-lcm.tex
 TEMPLATES = layout.tex
 
 OPEN_COMMAND = evince
 REMOVE_COMMAND = rm -f
 
-default: $(DOCUMENT)
+default: $(DOCUMENTS)
 
 %.pdf: %.tex $(TEMPLATES) $(SOURCES) $(BIBLIOGRAPHY)
 	context --pdf --color $<
 
-view: $(DOCUMENT)
-	$(OPEN_COMMAND) $(DOCUMENT) &
+view: $(DOCUMENTS)
+	$(OPEN_COMMAND) $(DOCUMENTS) &
 
 clean:
 	@echo Cleaning temporary files

@@ -9,22 +9,17 @@
 \setupinteraction[state=start,color=LinkColor]
 \setupbibtex[database=cited,sort=author]
 \setuppublications[alternative=apa-fr]
-\setuppublications[criterium=text, sorttype=bbl, numbering=no, autohang=yes]
+\setuppublications[criterium=all, sorttype=bbl, numbering=no, autohang=yes]
 
 \starttext
 
 \startfrontmatter
-\TitlePage
 
 {\ss\bfb\Title}
 \blank[2*big]
 
 \input summary
 \page[yes]
-
-\TableOfContent{Sommaire}
-\page[yes]
-\stopfrontmatter
 
 %%%
 %%%  Content
@@ -33,13 +28,8 @@
 \startbodymatter
 {\ss\bfb\Title}
 
-\input introduction
-\input origin
-\input context
 \input research-context
 \input sujet
-\input perspectives
-\input conclusion
 
 \section{Bibliographie}
 \placepublications
@@ -49,19 +39,11 @@
 %%% Annexes
 %%%
 
-\startappendices
-\setcounter[userpage][1]
-% \writetolist[section]{}{Annexes}
-\writebetweenlist[section]{
-	\blank[big]
-}
-
-\input constats
-\page[yes]
-\input contacts
-\page[yes]
-\input advancing-lcm
-
-\stopappendices
+% \startappendices
+% \setcounter[userpage][1]
+% \writebetweenlist[section]{
+% 	\blank[big]
+% }
+% \stopappendices
 
 \stoptext
