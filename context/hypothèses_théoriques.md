@@ -19,7 +19,7 @@ Qu'est-ce qu'une interaction en géographie ?
    mais qui peut résulter d'une complémentarité ou de compétition pour une ressources
 3. appartenance à une même maille territoriale (relation d'appartenance)
 4. relations causales : objets qui ont un effet (action) réciproque l'un sur l'autre,
-   influence
+   influence mutuelle
 
 
 Interactions ville-agriculture :
@@ -62,7 +62,7 @@ et peut parfois remplir plusieurs fonctions en même temps :
 Fonction : objectif assigné, raison d'être (maintenu en espace agricole)
 
 Ne garder que des fonctions "principales" :
-production alimentaire, récréatif, écologique (nature en ville)
+production alimentaire, écologique (nature en ville), récréatif, social
 
 La distance à la ville, au marché, à l'aire urbaine
 influence ces interactions, mais sans doute aussi
