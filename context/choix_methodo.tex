@@ -1,0 +1,161 @@
+\section
+{Choix méthodologiques :
+recours à l'analyse spatiale et à la modélisation}
+
+\subsection{Justification des apports de la modélisation}
+
+La consommation d'espaces naturels et agricoles
+est un processus complexe qui fait intervenir de nombreux facteurs,
+avec des interactions multi-scalaires.
+
+Les approches quantitatives, basées sur des indicateurs, permettent de donner
+une vue générale des dynamiques territoriales mais restent,
+en l'absence de modélisation, assez pauvres en informations.
+
+Le modèle est un objet intermédiaire
+qui aide à la lecture de la complexité du monde réel.
+La modélisation nous paraît indispensable pour dépasser
+une approche descriptive des dynamiques territoriales
+et expliquer les processus en œuvre.
+Le premier enjeu de la modélisation est d'expliciter les relations sémantiques
+et causales entre les variables représentées par les indicateurs.
+
+L'intégration des indicateurs dans une approche globale
+permet de construire des systèmes d'indicateurs
+plus pertinents pour le diagnostic territorial
+et l'évaluation des politiques publiques.
+
+L'apport du modèle est aussi :
+
+\startitemize[packed]
+
+\item de formuler et de tester des hypothèses sur des phénomènes
+  qui sont difficilement observables directement
+\item de permettre des changements d'échelle et de mettre en rapport dynamiques globales
+  et changements locaux
+\item d'identifier des régularités pour formuler des lois
+  à partir d'observations empiriques
+\item de comparer des situations différentes en explicitant
+  ce qui est générique et en le distinguant du spécifique.
+
+\stopitemize
+
+Cadre heuristique, théorie et modèle sont liés et leur relation va du général au particulier.
+Les cadres heuristiques « correspondent à la forme la plus générale d’analyse théorique ».
+Les théories permettent de formuler des hypothèses de travail sur les relations entre
+les éléments pertinents du cadre heuristique, tandis que le modèle permet
+de tester ces hypothèses dans une situation réelle \cite[ostrom_background_2011].
+
+Le modèle a donc une portée opérationnelle et spécifique.
+C'est un dispositif expérimental qui rend possible l'exploration
+de scénarios et permet d'apprendre à partir des écarts constatés entre
+ce qui est prédit par le modèle et ce qui est observé.
+
+La modélisation d’accompagnement, ou « companion modelling »,
+exploite cette acception opérationnelle du modèle : c'est une méthode participative
+basée sur les jeux de rôles et la simulation, utilisés pour servir de support
+au dialogue entre les acteurs ;
+elle encourage l’apprentissage collectif et organisationnel et
+permet ainsi une construction itérative et adaptative des décisions
+\cite[etienne_modelisation_2012].
+
+
+\subsection{Outils de modélisation}
+
+Deux familles de modèles explicitement spatialisés
+sont principalement utilisées pour modéliser et simuler
+les changements d'occupation et d'utilisation du sol :
+
+\startitemize[packed]
+
+\item les automates cellulaires ;
+\item les systèmes multi-agents.
+
+\stopitemize
+
+Les modèles basés sur les automates cellulaires, comme le modèle CLUE
+\cite[veldkamp_clue_1996, verburg_modeling_2002],
+permettent de rendre compte de manière tendancielle des processus d’évolution.
+Ces modèles ne permettent pas d'expliciter simplement les processus socioéconomiques,
+ce qui limite leur intérêt opérationnel pour l'aménagement
+et les politiques publiques.
+
+Les systèmes multi-agents (SMA) ont l'intérêt de mettre en évidence par la simulation
+les propriétés macroscopiques d'un système à partir des éléments microscopiques
+qui le composent. Les SMA permettent par exemple
+de mieux comprendre comment les choix individuels des agents s’agrègent
+pour expliquer les dynamiques à l'échelle du système environnemental ou territorial.
+Les SMA sont fréquemment utilisés
+comme support de la modélisation d'accompagnement
+dans le cadre de la gestion participative des problématiques environnementales
+\cite[le_page_agent_based_2013].
+
+À mi-chemin entre les automates cellulaires et les SMA,
+la plateforme Ocelet a été développée pour simuler les dynamiques territoriales et paysagères
+en rendant compte explicitement des processus et des interactions.
+Cette plateforme se fonde sur le formalisme des graphes pour représenter
+les relations entre les acteurs et les objets du système territorial
+\cite[degenne_design_2009, degenne_approche_2012, castets_integration_2014].
+Cette représentation permet de modéliser des processus multi-échelles.
+
+Nous proposons de recourir d'abord aux SMA pour
+mettre en évidence, avec des hypothèses simplificatrices,
+les effets d'auto-organisation et de couplage
+qui peuvent résulter de la compétition pour l'occupation du sol
+entre deux populations d'agents (citadins / agriculteurs)
+en fonction des tropismes (polarisation) de ces agents.
+Puis, à partir de ces premiers résultats,
+d'évoluer vers des modèles plus sophistiqués qui rendent compte
+des interactions multi-échelles, notamment à travers les mécanismes institutionnels,
+en utilisant la plateforme Ocelet.
+
+Les choix de modélisation seront précisés pendant la thèse.
+
+% couplage SMA / Ocelet ?
+
+\subsection{Démarche proposée}
+
+Notre démarche de modélisation suivra la méthode générale synthétisée par Magliocca (2015)
+à partir de la littérature sur la modélisation des changements d'occupation du sol.
+
+Cette méthode divise le processus de modélisation en 5 étapes :
+
+\startitemize[n]
+
+\item le point de départ de tout processus de modélisation
+   est la question de recherche et sa problématisation,
+   qui définit le phénomène spatial auquel on s'intéresse
+   ainsi que le contexte et l'échelle à laquelle on souhaite l'étudier,
+   son éventuel rapport avec des processus d'échelle plus large ;
+
+\item la description du problème permet d'identifier les limites du système,
+   ses composants (acteurs, variables, processus)
+   et les possibles relations qu'ils entretiennent.
+   La littérature apporte
+   un appui important pour identifier les composants et
+   les décrire en même temps qu'elle peut apporter
+   des éléments de théorie pour les mettre en relation.
+   À cette étape, la cartographie à dire d'acteurs peut
+   servir également à identifier ces éléments et à conceptualiser
+   le système étudié.
+
+\item le modèle conceptuel est ensuite traduit en modèle dynamique
+   et implémenté dans un programme informatique
+   en sélectionnant une représentation appropriée ;
+   l'utilisation d'une plateforme de modélisation
+   adaptée au type de modèle que l'on souhaite instancier
+   facilite la réalisation de cette étape ;
+
+\item le modèle est ensuite calibré et validé à l'aide des données
+   du terrain d'études ; cette étape permet de tester la capacité
+   du modèle à rendre compte des observations ainsi
+   que sa sensibilité aux données en entrée ;
+
+\item enfin, le modèle peut être exploité pour
+   tester des hypothèses complémentaires, explorer
+   différents scénarios ou être confronté à
+   ses utilisateurs potentiels. Cette étape d'expérimentation
+   permet de critiquer le modèle et de raffiner l'analyse du
+   problème initial.
+
+\stopitemize

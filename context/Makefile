@@ -1,8 +1,12 @@
 DOCUMENTS = dossier.pdf projet.pdf
 BIBLIOGRAPHY = cited.bib
-SOURCES = metadata.tex summary.tex introduction.tex origin.tex context.tex \
-          sujet.tex research-context.tex \
-          perspectives.tex conclusion.tex constats.tex contacts.tex advancing-lcm.tex
+SOURCES = metadata.tex summary.tex \
+          contexte.tex enjeux.tex enjeux_scientifiques.tex \
+          hypotheses_thematiques.tex approches_theoriques.tex questions_et_terrains.tex \
+          choix_methodo.tex activites.tex environnement.tex \
+          perspectives.tex conclusion.tex \
+          constats.tex contacts.tex advancing-lcm.tex annexe_contexte.tex
+
 TEMPLATES = layout.tex
 
 OPEN_COMMAND = evince
