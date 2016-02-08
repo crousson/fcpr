@@ -107,10 +107,17 @@
 }
 
 \def\TableOfContent#1%
-    {\page[yes]
-     {\ss\bf #1}
+    {{\ss\bf #1}
      \blank[2*big]
      \placecontent[alternative=c]}
+
+\def\ListOfFigures#1%
+    {{\ss\bf #1}
+     \blank[2*big]
+     \placelistoffigures[alternative=c]}
+
+\setupcaption[figure][prefix=Figure,location=bottom,headstyle=\ss\bf]
+\setupfloat[figure][location=middle]
 
 \def\NextPage%
    {\page[yes,reset]}
