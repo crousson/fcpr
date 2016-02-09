@@ -4,25 +4,28 @@
 
 \input layout
 \input metadata
+\input acronyms
 
 \setupurl[style=,urlspace=yes]
 \setupinteraction[state=start,color=LinkColor]
 \setupbibtex[database=cited,sort=author]
 \setuppublications[alternative=apa-fr]
-\setuppublications[criterium=all, sorttype=bbl, numbering=no, autohang=yes]
+\setuppublications[criterium=text, sorttype=bbl, numbering=no, autohang=yes]
 
 \starttext
 
-\startfrontmatter
+% \startfrontmatter
 
-{\ss\bfb\Title}
-\blank[big]
-{\ss\bfb\SubTitle}
+% {\ss\bfb\Title}
+% \blank[big]
+% {\ss\bfb\SubTitle}
 
-\blank[2*big]
+% \blank[2*big]
 
-\input summary
-\page[yes]
+% \input summary
+% \page[yes]
+
+% \stopfrontmatter
 
 %%%
 %%%  Content
@@ -35,9 +38,9 @@
 
 \input contexte
 \input enjeux
-\input enjeux_scientifiques
-\input hypotheses_thematiques
+\input probleme_et_verrous
 \input approches_theoriques
+\input hypotheses_thematiques
 \input questions_et_terrains
 \input choix_methodo
 \input activites

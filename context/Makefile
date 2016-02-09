@@ -1,8 +1,9 @@
 DOCUMENTS = dossier.pdf projet.pdf
 BIBLIOGRAPHY = cited.bib
-SOURCES = metadata.tex summary.tex \
-          contexte.tex enjeux.tex enjeux_scientifiques.tex \
-          hypotheses_thematiques.tex approches_theoriques.tex questions_et_terrains.tex \
+SOURCES = metadata.tex summary.tex acronyms.tex \
+          contexte.tex enjeux.tex probleme_et_verrous.tex \
+          approches_theoriques.tex theorie_organisation_urbaine.tex cadre_analyse.tex hypotheses_theoriques.tex \
+          hypotheses_thematiques.tex  questions_et_terrains.tex \
           choix_methodo.tex activites.tex environnement.tex \
           perspectives.tex conclusion.tex \
           constats.tex contacts.tex advancing-lcm.tex annexe_contexte.tex

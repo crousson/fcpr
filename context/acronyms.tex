@@ -1,0 +1,21 @@
+% \def\newacronym#1#2#3{% #1 = key, #2 = abbreviated form, #3 = expanded form
+%   \expandafter\def\csname ac@#1\endcsname{%
+%     #3~(#2)%
+%     \expandafter\gdef\csname ac@#1\endcsname{#2}%
+%    }%
+% }
+% \def\ac#1{\csname ac@#1\endcsname}
+
+\definesynonyms[acronym][acronyms][\infull]
+
+\acronym[PLU]{\sc plu}{Plan local d'urbanisme}
+\acronym[PLUi]{{\sc plu}i}{Plan local d'urbanisme inter-communal}
+\acronym[SCoT]{{\sc sc}o{\sc t}}{Schéma de cohérence territoriale}
+\acronym[IAD]{\sc iad}{Institutional analysis and development framework}
+\acronym[DPSIR]{\sc dpsir}{Driver Pressure State Impact Response}
+\acronym[SES]{\sc ses}{services écosytémiques}
+\acronym[UMR]{\sc umr}{Unité mixte de recherche}
+\acronym[TETIS]{\sc tetis}{TETIS}
+\acronym[EVS]{\sc evs}{Environnement, Ville et Société}
+\acronym[RPG]{\sc rpg}{Registre parcellaire graphique}
+\acronym[PAC]{\sc}{Politique agricole commune}
