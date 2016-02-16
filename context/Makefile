@@ -1,7 +1,7 @@
 DOCUMENTS = dossier.pdf projet.pdf
 BIBLIOGRAPHY = cited.bib
 SOURCES = metadata.tex summary.tex acronyms.tex \
-          contexte.tex enjeux.tex probleme_et_verrous.tex \
+          contexte.tex enjeux.tex probleme_et_verrous.tex cadre_analyse.tex apports_modelisation.tex \
           approches_theoriques.tex theorie_organisation_urbaine.tex cadre_analyse.tex hypotheses_theoriques.tex \
           hypotheses_thematiques.tex  questions_et_terrains.tex \
           choix_methodo.tex activites.tex environnement.tex \

@@ -37,10 +37,10 @@
 {\ss\bfb\SubTitle}
 
 \input contexte
-\input enjeux
+% \input approches_theoriques
 \input probleme_et_verrous
-\input approches_theoriques
-\input hypotheses_thematiques
+\input cadre_analyse
+\input apports_modelisation
 \input questions_et_terrains
 \input choix_methodo
 \input activites
@@ -54,11 +54,25 @@
 %%% Annexes
 %%%
 
-% \startappendices
-% \setcounter[userpage][1]
-% \writebetweenlist[section]{
-% 	\blank[big]
-% }
-% \stopappendices
+\startappendices
+\setcounter[userpage][1]
+\writebetweenlist[section]{
+	\blank[big]
+}
+
+\input iad
+\page[yes]
+%\input dpsir
+% \page[yes]
+\input coobs
+\page[yes]
+\input theorie_organisation_urbaine
+\page[yes]
+\input hypotheses_theoriques
+\input hypotheses_thematiques
+\page[yes]
+\input etapes_modelisation
+
+\stopappendices
 
 \stoptext
