@@ -1,0 +1,193 @@
+/* file example.css */
+
+body {
+  font-family  : "DejaVu Serif", serif ;
+  font-size    : 11pt ;
+  /*line-height  : 18pt ;*/
+  max-width    : 50em ;
+  padding      : 1em ;
+  text-align: justify;
+}
+
+h1, h2 {
+  text-align: justify;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+break {
+  display: inline-block;
+  clear: both;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+synonym + break {
+  display: inline;
+}
+
+br {
+  margin-bottom: 1.5em;
+}
+
+a + break {
+  display: inline;
+}
+
+paragraph, p {
+  display       : block ;
+  margin-top    : 0.5em ;
+  margin-bottom : 0.5em ;
+}
+
+section {
+  display : block ;
+}
+
+sectioncontent {
+  display       : block ;
+  margin-top    : 1em ;
+  margin-bottom : 1em ;
+}
+
+section[detail="section"], section[detail="title"] {
+  margin-top    : 2em ;
+  margin-bottom : 1em ;
+}
+
+section[detail="subject"] {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+section>sectionnumber {
+  display      : inline-block ;
+  margin-right : 1em ;
+  /*font-size    : 3em ;*/
+  font-weight  : bold ;
+}
+
+section>sectiontitle {
+  /*font-size   : 3em ;*/
+  font-weight : bold ;
+}
+
+description {
+  display       : block ;
+  margin-bottom : 1em ;
+  margin-top    : 1em ;
+}
+
+descriptiontag {
+  float        : left ;
+  clear        : left ;
+  margin-right : 1em ;
+  text-align   : left ;
+  font-weight  : bold ;
+}
+
+tabulate {
+  display       : table ;
+  margin-top    : 1em ;
+  margin-bottom : 1em ;
+  margin-left   : 2.5em ;
+}
+
+tabulaterow {
+  display : table-row ;
+}
+
+tabulatecell[align="middle"] {
+  display       : table-cell ;
+  text-align    : center ;
+  padding-right : 1em ;
+}
+
+tabulatecell[align="flushleft"] {
+  display       : table-cell ;
+  text-align    : left ;
+  padding-right : 1em ;
+}
+
+tabulatecell[align="flushright"] {
+  display       : table-cell ;
+  text-align    : right ;
+  padding-right : 1em ;
+}
+
+tabulatecell {
+  display       : table-cell ;
+  text-align    : left ;
+  padding-right : 1em ;
+}
+
+combination {
+  display       : table ;
+  margin-top    : 0em ;
+  margin-bottom : 0em ;
+}
+
+combinationpair {
+  display       : table-cell ;
+  padding-right : 1em ;
+}
+
+combinationcontent {
+  display    : table-row ;
+  text-align : center ;
+}
+
+combinationcaption {
+  display     : table-row ;
+  padding-top : 1ex ;
+  text-align  : center ;
+}
+
+float {
+  display       : block ;
+  text-align    : center ;
+  margin-top    : 1em ;
+  margin-bottom : 1em ;
+  margin-left   : 2.5em ;
+}
+
+floatcaption {
+  display    : block ;
+  margin-top : 0.5em ;
+  color      : rgb(60%,60%,0%) ;
+}
+
+floatlabel {
+  font-weight  : bold ;
+  margin-right : 1em ;
+}
+
+floatnumber {
+  font-weight : bold ;
+}
+
+formula {
+  display       : block ;
+  margin-top    : 1em ;
+  margin-bottom : 1em ;
+  margin-left   : 2.5em ;
+}
+
+sup {
+  font-size      : xx-small ;
+  line-height    : 0 ;
+  vertical-align : top ;
+}
+
+synonym {
+  /* text-transform: uppercase; */
+  font-variant: small-caps;
+}

@@ -1,0 +1,8 @@
+/* styles for file dossier.export */
+
+document {
+    font-size  : 11pt !important ;
+    max-width  : 470pt !important ;
+    text-align : justify !important ;
+    hyphens    : inherited !important ;
+}

@@ -6,7 +6,7 @@ SOURCES = metadata.tex summary.tex acronyms.tex \
           approches_theoriques.tex theorie_organisation_urbaine.tex cadre_analyse.tex hypotheses_theoriques.tex \
           hypotheses_thematiques.tex  questions_et_terrains.tex \
           choix_methodo.tex activites.tex environnement.tex \
-          perspectives.tex conclusion.tex \
+          resultats.tex perspectives.tex conclusion.tex \
           constats.tex contacts.tex advancing-lcm.tex annexe_contexte.tex
 
 TEMPLATES = layout.tex

@@ -6,6 +6,8 @@
 \input metadata
 \input acronyms
 
+\setupexport[width=470pt, hyphen=no]
+\setupbackend[export=yes, xhtml=yes, css=dossier.css]
 \setupurl[style=,urlspace=yes]
 \setupinteraction[state=start,color=LinkColor]
 \setupbibtex[database=cited,sort=author]
@@ -51,6 +53,7 @@
 \input questions_et_terrains
 \input cadre_analyse
 \input choix_methodo
+\input resultats
 \input activites
 \input environnement
 
@@ -73,15 +76,17 @@
 	\blank[big]
 }
 
-\input contacts
-\page[yes]
+% \input contacts
+% \page[yes]
 % \input annexe_contexte
 % \page[yes]
 % \input constats
 % \page[yes]
-\input advancing-lcm
-\page[yes]
+% \input advancing-lcm
+% \page[yes]
 \input coobs
+\page[yes]
+\input etapes_modelisation
 
 % TODO ajouter prospective DRAAF et SI métier
 
