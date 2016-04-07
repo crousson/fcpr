@@ -1,193 +1,184 @@
-/* file example.css */
+/* template for file dossier.export */
 
-body {
-  font-family  : "DejaVu Serif", serif ;
-  font-size    : 11pt ;
-  /*line-height  : 18pt ;*/
-  max-width    : 50em ;
-  padding      : 1em ;
-  text-align: justify;
+/* category: division */
+
+division[detail=bodypart] {
+    display: block ;
 }
 
-h1, h2 {
-  text-align: justify;
-  font-size: 12pt;
-  font-weight: bold;
+division[detail=frontpart] {
+    display: block ;
 }
 
-ul {
-  list-style: none;
+/* category: document */
+
+document {
+    display: block ;
 }
 
-li {
-  margin-bottom: 0.5em;
+/* category: float */
+
+float[detail=figure] {
+    display: block ;
 }
 
-break {
-  display: inline-block;
-  clear: both;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-synonym + break {
-  display: inline;
-}
-
-br {
-  margin-bottom: 1.5em;
-}
-
-a + break {
-  display: inline;
-}
-
-paragraph, p {
-  display       : block ;
-  margin-top    : 0.5em ;
-  margin-bottom : 0.5em ;
-}
-
-section {
-  display : block ;
-}
-
-sectioncontent {
-  display       : block ;
-  margin-top    : 1em ;
-  margin-bottom : 1em ;
-}
-
-section[detail="section"], section[detail="title"] {
-  margin-top    : 2em ;
-  margin-bottom : 1em ;
-}
-
-section[detail="subject"] {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-
-section>sectionnumber {
-  display      : inline-block ;
-  margin-right : 1em ;
-  /*font-size    : 3em ;*/
-  font-weight  : bold ;
-}
-
-section>sectiontitle {
-  /*font-size   : 3em ;*/
-  font-weight : bold ;
-}
-
-description {
-  display       : block ;
-  margin-bottom : 1em ;
-  margin-top    : 1em ;
-}
-
-descriptiontag {
-  float        : left ;
-  clear        : left ;
-  margin-right : 1em ;
-  text-align   : left ;
-  font-weight  : bold ;
-}
-
-tabulate {
-  display       : table ;
-  margin-top    : 1em ;
-  margin-bottom : 1em ;
-  margin-left   : 2.5em ;
-}
-
-tabulaterow {
-  display : table-row ;
-}
-
-tabulatecell[align="middle"] {
-  display       : table-cell ;
-  text-align    : center ;
-  padding-right : 1em ;
-}
-
-tabulatecell[align="flushleft"] {
-  display       : table-cell ;
-  text-align    : left ;
-  padding-right : 1em ;
-}
-
-tabulatecell[align="flushright"] {
-  display       : table-cell ;
-  text-align    : right ;
-  padding-right : 1em ;
-}
-
-tabulatecell {
-  display       : table-cell ;
-  text-align    : left ;
-  padding-right : 1em ;
-}
-
-combination {
-  display       : table ;
-  margin-top    : 0em ;
-  margin-bottom : 0em ;
-}
-
-combinationpair {
-  display       : table-cell ;
-  padding-right : 1em ;
-}
-
-combinationcontent {
-  display    : table-row ;
-  text-align : center ;
-}
-
-combinationcaption {
-  display     : table-row ;
-  padding-top : 1ex ;
-  text-align  : center ;
-}
-
-float {
-  display       : block ;
-  text-align    : center ;
-  margin-top    : 1em ;
-  margin-bottom : 1em ;
-  margin-left   : 2.5em ;
-}
+/* category: floatcaption */
 
 floatcaption {
-  display    : block ;
-  margin-top : 0.5em ;
-  color      : rgb(60%,60%,0%) ;
+    display: inline ;
 }
 
-floatlabel {
-  font-weight  : bold ;
-  margin-right : 1em ;
+/* category: floatcontent */
+
+floatcontent {
+    display: inline ;
 }
 
-floatnumber {
-  font-weight : bold ;
+/* category: floatlabel */
+
+floatlabel[detail=figure] {
+    display: inline ;
 }
 
-formula {
-  display       : block ;
-  margin-top    : 1em ;
-  margin-bottom : 1em ;
-  margin-left   : 2.5em ;
+/* category: floatnumber */
+
+floatnumber[detail=figure] {
+    display: inline ;
 }
 
-sup {
-  font-size      : xx-small ;
-  line-height    : 0 ;
-  vertical-align : top ;
+/* category: floattext */
+
+floattext {
+    display: inline ;
 }
 
-synonym {
-  /* text-transform: uppercase; */
-  font-variant: small-caps;
+/* category: image */
+
+image {
+    display: inline ;
+}
+
+/* category: item */
+
+item {
+    display: block ;
+}
+
+/* category: itemcontent */
+
+itemcontent {
+    display: inline ;
+}
+
+/* category: itemgroup */
+
+itemgroup[detail=itemize] {
+    display: block ;
+}
+
+/* category: itemtag */
+
+itemtag {
+    display: inline ;
+}
+
+/* category: link */
+
+link {
+    display: inline ;
+}
+
+/* category: list */
+
+list {
+    display: block ;
+}
+
+/* category: listcontent */
+
+listcontent {
+    display: inline ;
+}
+
+/* category: listitem */
+
+listitem[detail=figure] {
+    display: block ;
+}
+
+listitem[detail=section] {
+    display: block ;
+}
+
+/* category: listpage */
+
+listpage {
+    display: inline ;
+}
+
+/* category: listtag */
+
+listtag {
+    display: inline ;
+}
+
+/* category: math */
+
+math {
+    display: inline ;
+}
+
+/* category: mo */
+
+mo {
+    display: inline ;
+}
+
+/* category: mrow */
+
+mrow {
+    display: block ;
+}
+
+/* category: section */
+
+section[detail=section] {
+    display: block ;
+}
+
+section[detail=subject] {
+    display: block ;
+}
+
+section[detail=subsection] {
+    display: block ;
+
+}
+
+/* category: sectioncontent */
+
+sectioncontent {
+    display: block ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* category: sectionnumber */
+
+sectionnumber {
+    display: inline ;
+    font-weight: bold;
+}
+
+/* category: sectiontitle */
+
+sectiontitle {
+    display: inline ;
+    font-weight: bold;
+}
+
+/* category: synonym */
+
+synonym[detail=acronym] {
+    display: inline ;
 }

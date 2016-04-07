@@ -1,18 +1,20 @@
 % pdf language=fr interface=en
 
 \enableregime[utf]
+\mainlanguage[fr]
 
 \input layout
 \input metadata
 \input acronyms
 
-\setupexport[width=470pt, hyphen=no]
-\setupbackend[export=yes, xhtml=yes, css=dossier.css]
 \setupurl[style=,urlspace=yes]
 \setupinteraction[state=start,color=LinkColor]
 \setupbibtex[database=cited,sort=author]
 \setuppublications[alternative=apa-fr]
 \setuppublications[criterium=text, sorttype=bbl, numbering=no, autohang=yes]
+
+\setupbackend[export=yes,xhtml=yes,css=dossier.css,filename=dossier.xhtml]
+\setupexport[width=470pt, hyphen=no]
 
 \starttext
 
