@@ -1,0 +1,329 @@
+%% Document Latex : cv_crousson.tex
+%% V. 7 mars 2013
+%% Curriculum vitae
+%% Auteur: Christophe ROUSSON <christophe.rousson@gmail.com>
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[OT1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage[french]{babel}
+\usepackage{microtype}
+\usepackage{lmodern}
+%\usepackage{zefonts}
+
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+
+\newcommand{\Rubrique}[1]
+	% #1 = Titre de la rubrique
+	{\bigskip
+	\begin{minipage}[0]{18cm}
+		\fontfamily{cmss}\fontseries{bx}\selectfont
+		#1 $ \triangleright $ \\
+		\rule[8pt]{16cm}{.5pt}
+	\end{minipage}
+	 \par}
+
+\newcommand{\ElementChronologique}[2]
+	% #1 = période nnnn-nnnn
+	% #2 = descriptif
+	{\begin{minipage}[t]{2.5cm}  %% largeur colonne des dates
+		\begin{center}
+			\fontshape{sl}\selectfont #1
+		\end{center}
+	\end{minipage}
+	\begin{minipage}[t]{13.5cm}  %% largeur colonne du descriptif
+		#2
+	\end{minipage}
+	 \medskip\par}
+
+\newcommand{\MotClef}[1]
+	% #1 = expression à souligner
+	{$\bullet$ {\fontfamily{cmss}\fontseries{bx}\selectfont #1}}
+	
+\newcommand{\PointFort}[2]
+	% #1 = accroche
+	% #2 = description complémentaire
+	{\MotClef{#1}
+	#2
+	\medskip}
+
+\newcommand{\Competences}[2]
+	% #1 = période nnnn-nnnn
+	% #2 = descriptif
+	{\begin{minipage}[t]{2.5cm}  %% largeur colonne des dates
+	\-
+	\end{minipage}
+	\begin{minipage}[t]{13.5cm}  %% largeur colonne du descriptif
+		\MotClef{#1}
+		#2
+		\smallskip
+	\end{minipage}
+}
+
+\newcommand{\Lieu}[1]
+    % #1 = indication de lieu ou institutions
+    {{\it #1}}
+
+\newcommand{\Titre}[1]
+    % #1 = titre
+    {{\it #1}}
+
+\newcommand{\Projet}[1]
+    % #1 = Nom du projet
+    {$\bullet$ {\fontseries{bx}\selectfont Projet #1}}
+
+\voffset -2cm
+\hoffset -0.3cm
+\parindent=-10pt
+\textwidth=15.5cm
+
+\begin{document}
+
+\pagestyle{empty}
+\fontfamily{cmss}\selectfont
+
+\enlargethispage{3cm}
+
+%%%
+%%% État civil et informations générales
+%%%
+
+\begin{minipage}[0]{21cm}
+	\begin{minipage}[t]{11cm}
+		{
+		\fontseries{bx}\selectfont
+		% \fontfamily{lmdh}\selectfont
+		\fontsize{15pt}{17pt}\selectfont 
+			Christophe ROUSSON
+			\smallskip\\ }
+	\end{minipage}
+\end{minipage}
+
+\begin{minipage}[0]{21cm}
+	\begin{minipage}[t]{11cm}
+			{\fontseries{bx}\selectfont
+                Géomatique, SI environnementaux \\
+                Projets innovants}
+	\medskip \\
+            {\tt tél. : +33 6 59 77 43 14} \\
+			{\tt mél. : \href{mailto:christophe.rousson@agriculture.gouv.fr}{christophe.rousson@agriculture.gouv.fr}}
+	\end{minipage}
+	\begin{minipage}[t]{10cm}
+		{Né le 3 décembre 1978 (37 ans) \\
+        Nationalité Française
+        \medskip \\
+        7 rue Mirepoix \\
+        31000 Toulouse}
+	\end{minipage}
+\end{minipage}
+
+\bigskip\par
+
+%%%
+%%% Curriculum
+%%%
+
+\Rubrique{Projet professionnel}
+
+{\it\parindent=-2pt
+Exercer des missions d'appui aux politiques publiques auprès des services déconcentrés
+ou des collectivités territoriales, à l'interface entre l'opérationnel et
+la recherche appliquée, dans le domaine de
+l'aménagement du territoire et du développement durable \bigskip}
+
+%%    \PointFort{Esprit de synthèse, capacité à prendre du recul}
+%%    {}
+	
+    %%\PointFort{Réactivité et pugnacité}
+
+\Rubrique{Compétences en conduite de projet}
+	
+    \Competences{Bonnes pratiques de gestion de projet, agilité et culture de l'innovation}
+    {\\ Scrum master certifié PSM1,
+     \\ design participatif, innovation games, lean startup}
+
+    \Competences{Management transverse, animation d'équipe et de réseau, conduite de réunion}{}
+
+    \Competences{Capacité à définir les objectifs, à hiérarchiser les priorités, à piloter par les risques}
+    {}
+
+
+\Rubrique{Compétences en systèmes d'information et SIG}
+
+	\Competences{Excellente connaissance des systèmes d'information géographique}
+    {\\ Architecture des SI, outils de développement, méthodes informatiques}
+
+    % \Competences{Bonne connaissance des outils de la télédétection et de l'offre de données}{}
+
+    \Competences{Traitement et analyse de données, informatique scientifique}
+    {\\ R, Python/Pandas, MatLab, D3, Pig, Spark}
+
+    \Competences{Culture du logiciel libre et de l'Open Data}
+    {\\ Utilisateur de Linux depuis 2000, normes OGC / INSPIRE, Open Street Map}
+
+    \Competences{Bonne connaissance des outils de la télédétection et de l'offre actuelle de données}{}
+
+
+\Rubrique{Expérience professionnelle}
+
+\ElementChronologique{2014 -- auj.}
+		{\MotClef{Accompagnateur méthodes et solutions innovantes} \\
+		\Lieu{Bureau des méthodes, du support et de la qualité \\
+			Sous-direction des systèmes d'information,
+        	Ministère en charge de l'Agriculture} \\
+        $\rightarrow$ transformation agile de la SDSI \\
+        $\rightarrow$ accompagnement des MOA et des MOE dans leurs projets de SI métier \\
+        $\rightarrow$ promotion et développement des usages de l'information géographique }
+
+\ElementChronologique{2012 -- 2014}
+	{\MotClef{Directeur de projet et Product Owner Géo-IDE Base} \\
+	\Lieu{Sous-direction des systèmes d'information,
+        Ministère en charge de l'Agriculture} \\
+		Composant entrepôt de données
+		de l'infrastructure de données géographiques interministérielle}
+
+\ElementChronologique{2008 -- 2014}
+        {\MotClef{Chef du département Information Géographique} \\
+        \Lieu{Sous-direction des systèmes d'information,
+        Ministère en charge de l'Agriculture} \\
+        %% Rattaché à un bureau transverse en charge des méthodes et du support et avec l'appui ,
+        Responsable de la stratégie nationale du ministère en matière d'information géographique.\\
+        %% À l'aide d'une équipe de 4 ingénieurs, prescription et mise en {\oe}uvre des solutions techniques pour répondre aux nouvelles exigences (INSPIRE, OpenData)
+        %% et développer les usages de l'information géographique en appui aux missions du ministère. \\
+        $\rightarrow$ direction de projets informatiques, assistance à maîtrise d'ouvrage \\
+		% $\rightarrow$ accompagnement technique et méthodologique des équipes projet de la SDSI \\
+        $\rightarrow$ architecture des systèmes d'information géographique \\
+		$\rightarrow$ infrastructures de données géographiques, INSPIRE, Open Data \\
+		$\rightarrow$ relations avec l'IGN et les opérateurs }
+
+	%% $\rightarrow$ industrialisation du développement de fonctions géographiques et cartographiques dans les applications du système d'information centralisé \\
+	%% $\rightarrow$ projets à l'interministériel (Géo-IDE, SI Eau, etc.), relations avec l'IGN et les opérateurs }
+        %% Impliqué à la fois dans les projets de convergence à l'interministériel et avec les opérateurs et dans des projets internes d'industrialisation des développements,
+        %% j'ai pu développer des compétences de directeur de projets informatiques et une expertise opérationnelle en matière de stratégie de SI et de SIG. \\
+        %% \MotClef{Principales réalisations} \\
+        %% $\rightarrow$  mise en place du cadre technique (IDG interne, outils de développement) basé sur des solutions Open Source permettant d'industrialiser
+        %% les développements cartographiques dans les applications du ministère \\
+        %% $\rightarrow$  framework {\tt ORION-GEO} : composants cartographiques de développement rapide utilisés en interne pour la réalisation agile d'applicatifs métiers client léger (web)}
+        %% permettant la réduction effective des coûts et des risques des projets d'informatique géographique. }
+
+        %% Cet investissement s'est traduit par le mise en place l'infrastructure de données spatiales dédiées aux applications métiers,
+        %% la promotion de l'usage du GéoPortail,
+        %% et le développement d'ORION-GEO, le module géographique du framework web utilisé à la SDSI.\\
+        %% Le module fournit une solution originale et efficace aux difficultés d'intégrer le dimension géographique dans la
+        %% stratégie de SI et dans les projets informatiques, avec peu d'équivalent sur le marché.\\
+        %% Avec plus de 1500 jours de développement et plus de 1000 points de fonction,
+        %% ORION-GEO était un challenge technique remporté avec succès grâce à une approche innovante.
+
+% \ElementChronologique{2013}
+% 	{\Projet{CuteGIS}
+% 	\\ Plateforme INSPIRE en mode SaaS, technos GeoServer / Java / Scala / Leaflet
+% 	\\ Rôles tenus : Product owner, architecte}
+
+    \ElementChronologique{2007}
+        {\MotClef{Chercheur en géomatique} \\
+        \Lieu{Centre de recherche en géomatique, Université Laval, Québec} \\
+	Recherche sur les outils SIG collaboratifs et
+	la gouvernance des systèmes d'information géographique et
+    des infrastructures de données géographiques.\\
+	Contribution au projet open source GeoTools dans le cadre de Google Summer of Code 2007.}
+	%% \MotClef{Publications et conférences} : \\
+	%%    $\rightarrow$  CQFD/SAGEO 2007, Clermont-Ferrand, juin 2007 :
+	%%    Rousson, C. et Roche, S. \Titre{Vers l'élaboration d'une infrastructure géomatique collaborative.
+	%%    La gestion forestière comme modèle d'étude.}
+
+	\ElementChronologique{2005 -- 2006}
+		{\MotClef{Chef du service Aménagements forestiers et commercialisation des bois } \\
+        \Lieu{Office National des Forêts, Agence de Fontainebleau}\\
+        Responsable des projets d'aménagements forestiers de l'agence (3~000 ha par an)
+        et du suivi des exploitations forestières, ainsi que de la commercialisation par appels d'offre et ventes de gré à gré de 120~000~m\textsuperscript{3} de bois par an. \\
+        %% $\rightarrow$  Développement de nouveaux modes de commercialisation et d'exploitation plus respectueux de l'environnement.\\
+        % $\rightarrow$  Renforcement des outils de planification et de gestion en s'appuyant sur le SIG et une meilleure valorisation des données historiques du SIO.
+        }
+     
+	\ElementChronologique{2002 -- 2004}
+		{\MotClef{Responsable de bureau d'études} \\
+        \Lieu{Office National des Forêts, Agence de Créteil}\\
+        Responsable d'une équipe de 8 techniciens et ingénieurs, %% dont 2 ingénieurs paysagistes,
+        réalisant, dans le contexte périurbain de la proche couronne parisienne,
+        les projets d'aménagements forestiers en concertation avec les partenaires institutionnels et les usagers\\
+        %% J'ai été également responsable d'une activité bureau d'études (paysage, arbre en ville) générant un CA annuel de 350 kEUR. \\
+        $\rightarrow$ Aménagements forestiers réalisés : forêt domaniale de Montmorency (2~200 ha, Val d'Oise), forêt domaniale de Notre-Dame (2~050 ha, Val de Marne). }
+        %% Autres réalisations : inventaire de 30~000 arbres d'alignement sur la voirie départementale des Hauts-Seine et mise en place d'un SIG (CG92) }
+
+	\ElementChronologique{2002}
+		{\MotClef{Chargé d'études pour l'aménagement d'Epping Forest} \\
+		\Lieu{Corporation of London, Londres}\\
+        Projet de diagnostic écologique et sylvicole sous la direction de Dr J. Dagley. \\
+        Inventaire et préconisation de gestion pour la préservation de la population remarquable de hêtres têtards
+        vestiges des pratiques sylvo-pastorales communautaires.}
+
+%	\ElementChronologique{2001}
+%		{\MotClef{stagiaire cabinet d'experts forestiers} \\
+%		Cabinet Patrick Costaz, Paris}
+
+%	\ElementChronologique{1999}
+%		{\MotClef{recherche sur la modélisation des paysages forestiers} \\
+% 		Centre de recherche en géomatique, université Laval, Québec}
+
+\Rubrique{Publications}
+
+ROUSSON, C. et ROCHE, S. (2007) \Titre{Vers l'élaboration d'une infrastructure géomatique collaborative.
+	    La gestion forestière comme modèle d'étude}. Conférence SAGEO / CQFD, France.
+
+\Rubrique{Prix et récompenses}
+
+	\ElementChronologique{2015}
+	{\MotClef{Hackathon FranceConnect} --
+	API Ruchers \\
+	Concept de SI environnemental valorisant la télédéclaration des apiculteurs}
+
+	\ElementChronologique{2013}
+	{\MotClef{DataConnexions} -- Prix Territoire (Projet CuteGIS) \\
+	 \MotClef{Défi Numérique Toulouse Métropole} -- Prix Innovation (Projet CuteGIS) }
+
+	\ElementChronologique{2001}
+	{\MotClef{Médaille Tisserand de l'Académie d'Agriculture}}
+
+\Rubrique{Formation}
+
+	\ElementChronologique{2000-2002}
+		{\MotClef{AgroParisTech - Formation des ingénieurs du génie rural, des eaux et des forêts}
+		\\ Spécialisation en sciences forestières et gestion des milieux naturels}
+
+	\ElementChronologique{1998-2001}
+		{\MotClef{AgroParisTech - Diplôme d'Ingénieur Agronome}}
+	
+% \enlargethispage{1cm}
+
+\Rubrique{Langues}
+	
+	\PointFort{Anglais courant}
+	{-- niveau C1}
+
+    \PointFort{Italien, Espagnol, Allemand}
+    {-- niveau A2/B1}
+
+\Rubrique{Activités associatives et intérêts personnels}
+
+	\PointFort{Intéressé par l'ESS et le mouvement coopératif}
+	{\\ Projet d'habitat coopératif à Toulouse, écoquartier de la Cartoucherie}
+
+	% \PointFort{AbriCoop, coopérative d'habitants}
+	% {\\ Projet d'habitat participatif à Toulouse, écoquartier de la Cartoucherie}
+	
+	\PointFort{Soutien scolaire}
+	{-- Bénévole}
+
+\end{document}
+
+
+
+
+
+
+
+
