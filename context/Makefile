@@ -8,7 +8,8 @@ SOURCES = metadata.tex summary.tex acronyms.tex \
           choix_methodo.tex activites.tex environnement.tex \
           resultats.tex perspectives.tex conclusion.tex \
           constats.tex contacts.tex advancing-lcm.tex annexe_contexte.tex
-
+ATTACHMENTS = ../pdf/*.pdf
+FIGURES = ../svg/*.svg
 TEMPLATES = layout.tex
 
 OPEN_COMMAND = evince
@@ -16,7 +17,7 @@ REMOVE_COMMAND = rm -f
 
 default: $(DOCUMENTS)
 
-%.pdf: %.tex $(TEMPLATES) $(SOURCES) $(BIBLIOGRAPHY)
+%.pdf: %.tex $(TEMPLATES) $(SOURCES) $(BIBLIOGRAPHY) $(ATTACHMENTS) $(FIGURES)
 	context --pdf --color $<
 
 view: $(DOCUMENTS)

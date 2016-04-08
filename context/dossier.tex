@@ -21,13 +21,16 @@
 \startfrontmatter
 \TitlePage
 
+\input synthese-cfd
+\page[yes]
+
 {\ss\bfb\Title}
 \blank[big]
-{\ss\bfb\SubTitle}
-\blank[2*big]
+% {\ss\bfb\SubTitle}
+% \blank[2*big]
 
-\input summary
-\page[yes]
+% \input summary
+% \page[yes]
 
 \TableOfContent{Sommaire}
 \blank[2*big]
@@ -55,8 +58,8 @@
 \input questions_et_terrains
 \input cadre_analyse
 \input choix_methodo
-\input resultats
 \input activites
+\input resultats
 \input environnement
 
 \input perspectives
@@ -73,13 +76,12 @@
 
 \startappendices
 \setcounter[userpage][1]
-% \writetolist[section]{}{Annexes}
+
+\writetolist[section]{}{Annexes}
 \writebetweenlist[section]{
 	\blank[big]
 }
 
-% \input contacts
-% \page[yes]
 % \input annexe_contexte
 % \page[yes]
 % \input constats
@@ -91,6 +93,8 @@
 \input etapes_modelisation
 \page[yes]
 \input cv
+\page[yes]
+\input contacts
 \page[yes]
 \input ssp
 
