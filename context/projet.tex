@@ -12,20 +12,27 @@
 \setuppublications[alternative=apa-fr]
 \setuppublications[criterium=text, sorttype=bbl, numbering=no, autohang=yes]
 
+\def\fulldossier{\iffalse}
+
 \starttext
 
-% \startfrontmatter
+\startfrontmatter
+\TitlePage
 
-% {\ss\bfb\Title}
-% \blank[big]
-% {\ss\bfb\SubTitle}
+{\ss\bfb\Title}
+\blank[big]
+{\ss\bfb\SubTitle}
+\blank[2*big]
 
-% \blank[2*big]
+\input summary
+\page[yes]
 
-% \input summary
-% \page[yes]
+\TableOfContent{Sommaire}
+\blank[2*big]
+\ListOfFigures{Liste des figures}
 
-% \stopfrontmatter
+\page[yes]
+\stopfrontmatter
 
 %%%
 %%%  Content
@@ -36,15 +43,17 @@
 \blank[big]
 {\ss\bfb\SubTitle}
 
+\input introduction
 \input contexte
-% \input approches_theoriques
 \input probleme_et_verrous
 \input apports_modelisation
 \input questions_et_terrains
 \input cadre_analyse
 \input choix_methodo
 \input activites
+\input resultats
 \input environnement
+\input conclusion
 
 \section{Bibliographie}
 \placepublications
@@ -56,22 +65,23 @@
 
 \startappendices
 \setcounter[userpage][1]
+
+\writetolist[section]{}{Annexes}
 \writebetweenlist[section]{
 	\blank[big]
 }
 
-\input iad
-\page[yes]
-% \input dpsir
+% \input annexe_contexte
+% \page[yes]
+% \input constats
+% \page[yes]
+% \input advancing-lcm
 % \page[yes]
 \input coobs
 \page[yes]
-% \input theorie_organisation_urbaine
-% \page[yes]
-% \input hypotheses_theoriques
-% \input hypotheses_thematiques
-% \page[yes]
 \input etapes_modelisation
+
+% TODO ajouter prospective DRAAF et SI métier
 
 \stopappendices
 
